@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MineSweeper</title>
+    <link rel="stylesheet" href="./vendor/normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="body">
+  <header class="header">
+    <h1 class="title">Welcome to MineSweeper</h1>
+  </header>
+  <div id="welcomePopup">
+    <button id="startButton">START</button>
+  </div>
+  <div class="controlsWrapper">
+    <button class="controlsButton" id="newGameButton">New Game</button>
+    <button class="controlsButton" id="scoreButton">Score</button>
+    <button class="controlsButton" id="modeButton">Light Mode</button>
+  </div>
+  <div id="settingsPopup" class="popup">
+    <p class="settingsTitle">difficulty</p>
+    <button id="easyButton" class="diffButton buttonPressed">easy</button>
+    <button id="mediumButton" class="diffButton">medium</button>
+    <button id="hardButton" class="diffButton">hard</button>
+    <p class="settingsTitle">mines</p>
+    <button class="minesButton" id="minesMinus">-</button>
+    <input type="number" id="minesInput" min="10" max="99">
+    <button class="minesButton" id="minesPlus">+</button>
+    <br>
+    <button id="startGameButton">start game</button>
+    <br>
+    <button id="cancelGameButton">cancel</button>
+  </div>
+  <div class="popup" id="scoresPopup">
+    <div id="scoreTable"></div>
+    <button class="popupButton" id="hideScoreButton">close score</button>
+  </div>
+  <div class="displaysWrapper">
+    <div class="display">
+      <p class="display-title">seconds</p>
+      <p class="display-number" id="timeNumber">0</p>
+    </div>
+    <div class="display">
+      <p class="display-title">mines</p>
+      <p class="display-number" id="minesNumber">10</p>
+    </div>
+    <div class="display">
+      <p class="display-title">flags</p>
+      <p class="display-number" id="flagsNumber">0</p>
+    </div><div class="display">
+      <p class="display-title">clicks</p>
+      <p class="display-number" id="clicksNumber">0</p>
+    </div>
+  </div>
+  <div class="gameWrapper" id="gameWrapper">
+     <div class="gameboardWrapper" id="gameboardWrapper">
+    </div>
+  </div>
+  <div class="popup" id="endGamePopup">
+    <button id="endGameButton">OK</button>
+  </div>
+  <footer class="footer">
+    <button class="footerButton" id="musicButton"></button>
+    <button id="soundButton" class="footerButton"></button>
+  </footer>
+    <script type="module" src="./pages/index.js"></script>
+  </body>
+</html>

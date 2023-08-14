@@ -1,0 +1,387 @@
+.body{
+    background: var(--body_background);
+    background-blend-mode: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+
+    --body_background: url("./assets/background.png"),linear-gradient(to bottom, #df6fff, #b453de, #8a38be, #611d9e, #37007f);
+    --cell_background: #c066d6;
+    --title_color: #37007f;
+    --controlsButton_background: #df6fff;
+    --controlsButton_title: #37007f;
+    --display_background: #df6fff;
+    --display_title: #37007f;
+    --popup_background: #df6fff;
+    --lineScore_color: #37007f;
+    --settingsTitle_color: #37007f;
+
+}
+.darkmode {
+    --body_background: url("./assets/background-dark.png"), black;
+    --cell_background: rgba(29, 65, 111, 0.84);
+    --title_color: #e1ccff;
+    --controlsButton_background: #2a2e5a;
+    --controlsButton_title: #e1ccff;
+    --display_background: #2a2e5a;
+    --display_title: #e1ccff;
+    --popup_background: #2a2e5a;
+    --lineScore_color: #e1ccff;
+    --settingsTitle_color: #e1ccff;
+}
+#welcomePopup {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(0,0,0,1) 27%, rgba(142,83,153,1) 100%);
+}
+#startButton {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    border: 5px solid #211c28;
+    background: url('./assets/bg-gif.gif'), #211c28;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 1.5em;
+    font-family: 'Press Start 2P';
+
+}
+.title{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Press Start 2P';
+    -webkit-text-stroke-width: thin;
+    -webkit-text-stroke-color: darkorchid;
+    margin-bottom: 30px;
+    color: var(--title_color);
+}
+.controlsWrapper {
+    display: flex;
+    max-width: 50%;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    column-gap: 15px;
+}
+.controlsButton {
+    border-radius: 15px;
+    background: var(--controlsButton_background);
+    padding: 20px;
+    color: var(--controlsButton_title);
+    font-family: 'Press Start 2P', cursive;
+    border-top-color: lightpink;
+    border-left-color: lightpink;
+    border-bottom-color: #8a38be;
+    border-right-color: #8a38be;
+}
+.controlsButton:active{
+    border-top-color: #8a38be;
+    border-left-color: #8a38be;
+    border-bottom-color: lightpink;
+    border-right-color: lightpink;
+}
+.gameWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.gameboardWrapper {
+    min-width: 50%;
+}
+.displaysWrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    column-gap: 10px;
+}
+.display {
+    background-color: var(--display_background);
+    border-radius: 15px;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 80px;
+    height: 40px;
+    font-family: 'Press Start 2P', cursive;
+    border-top-color: lightpink;
+    border-left-color: lightpink;
+    border-bottom-color: #8a38be;
+    border-right-color: #8a38be;
+}
+.display-title {
+    font-size: 11px;
+    color: var(--display_title);
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.display-number {
+    font-size: 11px;
+    color: white;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+.line{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.cell{
+    background: var(--cell_background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    border-top-color: lightpink;
+    border-left-color: lightpink;
+    border-bottom-color: #8a38be;
+    border-right-color: #8a38be;
+
+}
+
+.open {
+    color: white;
+    background-color: transparent;
+    border: 2px solid;
+    border-top-color: #8a38be;
+    border-left-color: #8a38be;
+    border-bottom-color: lightpink;
+    border-right-color: lightpink;
+    font-family: 'Press Start 2P', cursive;
+}
+.mine {
+    background: url("./assets/bomb.png");
+    background-size: contain;
+}
+.mines1 {
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+}
+.mines2{
+    background-color: rgba(255,255,255,0.2);
+    color: #f9c8cf;
+}
+.mines3{
+    background-color: rgba(255,255,255,0.2);
+    color: #fc7a7a;
+}
+.mines4{
+    background-color: rgba(255,255,255,0.2);
+    color: #ff3636;
+}
+.mines5{
+    background-color: rgba(255,255,255,0.2);
+    color: #ff0213;
+}
+.mines6{
+    background-color: rgba(255,255,255,0.2);
+    color: #ab0000;
+}
+.mines7{
+    background-color: rgba(255,255,255,0.2);
+    color: #810101;
+}
+.mines8{
+    background-color: rgba(255,255,255,0.2);
+    color: #530000;
+}
+
+.boom {
+    background-color: #c10707;
+    -webkit-box-shadow: 0 5px 35px 13px rgba(255, 0, 23, 0.47);
+    -moz-box-shadow: 0 5px 35px 13px rgba(255, 0, 23, 0.47);
+    box-shadow: 0 5px 35px 13px rgba(255, 0, 23, 0.47);
+}
+.flagged {
+    background: url("./assets/flag.png");
+    background-size: contain;
+    background-color: #df6fff;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cell_largeField {
+    height: 2.5vw;
+    width: 2.5vw;
+    max-height: 20px;
+    max-width: 20px;
+    min-height: 15px;
+    min-width: 15px;
+}
+.cell_mediumField {
+    height: 3vw;
+    width: 3vw;
+    max-height: 35px;
+    max-width: 35px;
+    min-height: 25px;
+    min-width: 25px;
+}
+.cell_smallField{
+    height: 3vw;
+    width: 3vw;
+    max-height: 50px;
+    max-width: 50px;
+    min-height: 35px;
+    min-width: 35px;
+}
+.closed {
+    background-color: #df6fff;
+    border: 3px solid;
+    border-top-color: lightpink;
+    border-left-color: lightpink;
+    border-bottom-color: #8a38be;
+    border-right-color: #8a38be;
+
+}
+.footerButton {
+    width:35px;
+    height: 35px;
+    margin: 10px;
+    border-radius: 17px;
+    background-color: #df6fff;
+    color: #37007f;
+    font-family: 'Press Start 2P', cursive;
+    border-color: lightpink;
+}
+.footer {
+    align-self: end;
+    padding-right: 35px;
+}
+#finalMessage {
+    text-align: right;
+    font-size: 1.1em;
+    font-family: 'Press Start 2P';
+    -webkit-text-stroke-width: thin;
+    -webkit-text-stroke-color: #ffffff;
+    position: absolute;
+    right: 10px;
+    color: #cca8fd;
+}
+.popup {
+    display: none;
+    position: absolute;
+    min-width: 300px;
+    height: fit-content;
+    min-height: 300px;
+    border-radius: 15px;
+    border: 5px solid;
+    border-top-color: lightpink;
+    border-left-color: lightpink;
+    border-bottom-color: #8a38be;
+    border-right-color: #8a38be;
+    background-color: var(--popup_background);
+    -webkit-box-shadow: 0 5px 27px 32px rgba(41, 9, 176, 0.3);
+    -moz-box-shadow: 0 5px 27px 32px rgba(41, 9, 176, 0.3);
+    box-shadow: 0 5px 27px 32px rgba(41, 9, 176, 0.3);
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-family: 'Press Start 2P';
+    -webkit-text-stroke-width: thin;
+    -webkit-text-stroke-color: darkorchid;
+}
+
+.popup.popuped {
+    display: unset;
+}
+.settingsTitle {
+    color: var(--settingsTitle_color);
+}
+#settingsPopup button {
+    background-color: lightpink;
+}
+.buttonPressed  {
+    background-color: #8a38be !important ;
+}
+.diffButton {
+    border-radius: 7px;
+}
+.minesButton{
+    border-radius: 7px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+#minesInut {
+    background-color: lightpink;
+}
+#startGameButton{
+    border-radius: 7px;
+    margin-top: 30px;
+    width: 150px;
+}
+#cancelGameButton {
+    border-radius: 7px;
+    margin-top: 10px;
+    width: 150px;
+}
+#hideScoreButton{
+    border-radius: 7px;
+    margin-top: 10px;
+    width: 250px;
+    background-color: lightpink;
+}
+.scoresLine{
+    margin-top: 6px;
+    margin-bottom: 6px;
+    color: var(--lineScore_color);
+}
+#endGamePopup.popuped {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+#endGameButton {
+    width: 60px;
+    height: 60px;
+    align-self: center;
+    border-radius: 50%;
+    border: 1px solid rgb(210, 181, 210);
+}
+.win {
+    background: url("./assets/win.png"), radial-gradient(circle, rgba(255,255,255,1) 60%, rgba(142,83,153,1) 100%);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 10px solid rgb(210, 181, 210);
+    border-radius: 50%;
+    -webkit-box-shadow: 0 5px 82px 86px rgba(255, 255, 255, 0.77);
+    -moz-box-shadow: 0 5px 82px 86px rgba(255, 255, 255, 0.77);
+    box-shadow: 0 5px 82px 86px rgba(255, 255, 255, 0.77);
+}
+.lose {
+    background: url("./assets/lose.png"), radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(142,83,153,1) 100%);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 10px solid rgb(40 19 40);
+    border-radius: 50%;
+    -webkit-box-shadow: 0 5px 82px 86px rgba(0, 0, 0, 0.77);
+    -moz-box-shadow: 0 5px 82px 86px rgba(0, 0, 0, 0.77);
+    box-shadow: 0 5px 82px 86px rgba(0, 0, 0, 0.77);
+}
+button:hover {
+    transform: scale(1.1);
+
+}
+#soundButton {
+    background: url("./assets/soundon.png");
+    background-size: contain;
+}
+#musicButton {
+    background: url("./assets/musicon.png"), gainsboro;
+    background-size: contain;
+}
+.muted {
+    filter: grayscale(100%);
+}

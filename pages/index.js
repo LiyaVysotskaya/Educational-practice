@@ -149,7 +149,7 @@ window.addEventListener('load', () => {
     };
 
     newGamePopup.classList.remove('popuped');
-    mineMinus.innerText = mines.toString();
+    minesNumber.innerText = mines.toString();
     flagsNumber.innerText = '0';
     clicksNumber.innerText = '0000';
     timeNumber.innerText = '0000';
